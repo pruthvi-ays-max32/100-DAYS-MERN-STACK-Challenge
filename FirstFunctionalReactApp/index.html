@@ -1,0 +1,30 @@
+<script src="/100-DAYS-MERN-STACK-Challenge/FirstReactProject/react.js"></script>
+<script src="/100-DAYS-MERN-STACK-Challenge/FirstReactProject/reactDOM.js"></script>
+<script src="/100-DAYS-MERN-STACK-Challenge/FirstReactProject/babel.js"></script>
+
+<p id="root"></p>
+
+<script type="text/babel">
+
+    // first arrow functional component in react
+    const App = () =>{
+
+      function handleClick(){
+          alert("button clicked")
+      }
+
+      return (
+        <div>
+        <p> 1st No : <span> <input type="Number" /> </span></p>
+        <p> 2nd No : <span> <input type="Number" /> </span></p>
+        <p> <button onClick={handleClick}> Let's Add </button></p>
+
+        <p> Result : <span>1</span></p>
+        </div>
+      )
+    }
+
+    const root = ReactDOM.createRoot(document.querySelector("#root"))
+
+    root.render(<App />);
+</script>
